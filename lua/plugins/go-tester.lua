@@ -32,7 +32,7 @@ return {
                 runner = "go",
                 go_test_args = {
                     "-v",
-                    "-race",
+                    -- "-race",
                     "-count=1",
                     "-coverprofile=" .. vim.fn.getcwd() .. "/coverage.out",
                 },
