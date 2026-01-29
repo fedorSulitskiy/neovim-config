@@ -1,6 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     branch = "main",
+    version = false,
     build = ":TSUpdate",
     config = function()
         -- Basic setup (but highlighting won't auto-enable)
