@@ -28,7 +28,7 @@ return {
 				},
 			})
 
-			vim.lsp.config("nixd", { 
+			vim.lsp.config("nixd", {
 				capabilities = capabilities,
 				settings = {
 					nixpkgs = {
@@ -40,8 +40,12 @@ return {
 				},
 			})
 
+			vim.lsp.config("terraformls", {
+				capabilities = capabilities,
+			})
+
 			-- 2. enable them
-			vim.lsp.enable({ "lua_ls", "gopls", "pyright", "nixd" })
+			vim.lsp.enable({ "lua_ls", "gopls", "pyright", "nixd", "terraformls" })
 		end,
 	},
 }

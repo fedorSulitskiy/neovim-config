@@ -19,6 +19,7 @@ return {
                 "heex",
                 "javascript",
                 "html",
+                "terraform",
             },
             auto_install = true,
         })
@@ -30,6 +31,9 @@ return {
         --         vim.treesitter.start()
         --     end,
         -- })
+
+        -- map the filetype(s) to the correct parser name (in cases where it didn't work automatically)
+        vim.treesitter.language.register("terraform", { "terraform", "tf", "terraform-vars" })
 
         -- Auto-enable for ALL file types
         vim.api.nvim_create_autocmd("BufReadPost", {

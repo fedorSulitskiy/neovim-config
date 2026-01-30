@@ -43,6 +43,13 @@ return {
 					args = { "--quiet" },
 					stdin = true,
 				},
+
+				-- Terraform
+				terraform = {
+					command = "terraform-ls",
+					args = { "serve" },
+					filetypes = { "terraform", "tf" },
+				},
 			},
 
 			formatters_by_ft = {
@@ -50,6 +57,7 @@ return {
 				go = { "goimports", "gofumpt", "swag" },
 				python = { "black", "isort" },
 				nix = { "alejandra" },
+				terraform = { "terraform-ls" },
 			},
 
 			-- Format on save
