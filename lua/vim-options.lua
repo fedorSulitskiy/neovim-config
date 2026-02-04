@@ -11,6 +11,7 @@ vim.cmd("set shiftwidth=4")
 vim.g.mapleader = " "
 
 -- Line Numbers
+vim.opt.number         = true
 vim.opt.relativenumber = true
 
 -- Diagnostics
