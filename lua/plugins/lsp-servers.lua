@@ -44,8 +44,12 @@ return {
 				capabilities = capabilities,
 			})
 
+			vim.lsp.config("just-lsp", {
+				capabilities = capabilities,
+			})
+
 			-- 2. enable them
-			vim.lsp.enable({ "lua_ls", "gopls", "pyright", "nixd", "terraformls" })
+			vim.lsp.enable({ "lua_ls", "gopls", "pyright", "nixd", "terraformls", "just-lsp" })
 		end,
 	},
 }

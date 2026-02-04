@@ -20,6 +20,7 @@ return {
                 "javascript",
                 "html",
                 "terraform",
+                "just",
             },
             auto_install = true,
         })
