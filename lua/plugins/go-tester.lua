@@ -25,9 +25,9 @@ return {
             { "<leader>tt", function() require("neotest").run.stop() end,                                       desc = "[t]est [t]erminate" },
         },
         config = function()
-            local config = {
-                runner = "gotestsum",
-            }
+            -- local config = {
+            --     runner = "gotestsum",
+            -- }
             local neotest_golang_opts = {
                 runner = "go",
                 go_test_args = {

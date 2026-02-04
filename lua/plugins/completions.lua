@@ -31,7 +31,7 @@ return {
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
-					
+
 					-- Enter to confirm completion without newline
 					["<CR>"] = cmp.mapping({
 						i = function(fallback)
