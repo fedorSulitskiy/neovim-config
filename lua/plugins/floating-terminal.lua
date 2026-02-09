@@ -1,3 +1,6 @@
+-- Reference: https://www.youtube.com/watch?v=5PIiKDES_wc&t=301s
+--            https://github.com/tjdevries/advent-of-nvim/blob/master/nvim/plugin/floaterminal.lua
+
 local state = {
   floating = {
     buf = -1,
