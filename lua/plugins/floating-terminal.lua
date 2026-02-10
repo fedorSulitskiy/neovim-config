@@ -54,7 +54,7 @@ local toggle_terminal = function()
 end
 
 vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
-vim.keymap.set({"n", "t"}, "<leader>T", toggle_terminal, { desc = "Toggle Floating Terminal" })
+vim.keymap.set({"n", "t"}, "<leader>tt", toggle_terminal, { desc = "Toggle Floating Terminal" })
 
 -- Return empty table to remove friction with LazyVim importer
 return {}

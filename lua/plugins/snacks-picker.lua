@@ -52,13 +52,6 @@ return {
 				end,
 				desc = "Find Files",
 			},
-			{
-				"<leader>fr",
-				function()
-					Snacks.picker.recent()
-				end,
-				desc = "Recent",
-			},
 			-- Help
 			{
 				"<leader>sh",
