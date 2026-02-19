@@ -40,8 +40,12 @@ return {
         vim.api.nvim_create_autocmd("BufReadPost", {
             pattern = "*",
             callback = function()
-                -- Start treesitter for the current buffer
-                vim.treesitter.start()
+                local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
+                if lang and pcall(vim.treesitter.language.inspect, lang) then
+                    vim.treesitter.start()
+                else
+                    vim.notify("No Tree-sitter parser for filetype: " .. vim.bo.filetype, vim.log.levels.INFO)
+                end
             end,
         })
     end,
