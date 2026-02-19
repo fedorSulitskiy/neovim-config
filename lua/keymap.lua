@@ -18,6 +18,23 @@ end, { desc = "Toggle Rendered Markdown" })
 vim.keymap.set("v", "<leader>at", ":AddGoTags<CR>", { desc = "Add Go struct tags", silent = true })
 vim.keymap.set("v", "<leader>rt", ":RemoveGoTags<CR>", { desc = "Remove Go struct tags", silent = true })
 
+-- Diagnostics
+vim.keymap.set("n", "]e", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+vim.keymap.set("n", "[e", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+
+-- Git Hunk
+vim.keymap.set("n", "]c", function()
+    if vim.wo.diff then return "]c" end
+    vim.schedule(function() require("gitsigns").next_hunk() end)
+    return "<Ignore>"
+end, { desc = "Next hunk", expr = true })
+
+vim.keymap.set("n", "[c", function()
+    if vim.wo.diff then return "[c" end
+    vim.schedule(function() require("gitsigns").prev_hunk() end)
+    return "<Ignore>"
+end, { desc = "Previous hunk", expr = true })
+
 -- Go Coverage
 vim.keymap.set('n', '<leader>tc', '<Cmd>Coverage<CR>', { desc = '[t]oggle [c]overage signs' })
 vim.keymap.set('n', '<leader>tC', function()
