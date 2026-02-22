@@ -1,27 +1,38 @@
 return {
 	{
 		"folke/snacks.nvim",
-		opts = {
-			picker = {
-				sources = {
-					files = {
-						hidden = true,
-						ignored = true,
-						exclude = { "**/.git", "**/.DS_Store", "**/.venv", "**/vendor", "**.log", "**/docs" },
-					},
-					grep = {
-						hidden = true,
-						ignored = true,
-						exclude = { "**/.git", "**/.DS_Store", "**/.venv", "**/vendor", "**.log", "**/docs" },
-					},
-					explorer = {
-						hidden = true,
-						ignored = true,
-						exclude = { "**/.git", "**/.DS_Store", "**/.venv", "**/vendor", "**.log", "**/docs" },
+		opts = function(_, opts)
+			local exclude = {
+				"**/.git",
+				"**/.DS_Store",
+				"**/.venv",
+				"**/vendor",
+				"**.log",
+				"**/docs",
+				"**/.opencode",
+			}
+			return vim.tbl_deep_extend("force", opts, {
+				picker = {
+					sources = {
+						files = {
+							hidden = true,
+							ignored = true,
+							exclude = exclude,
+						},
+						grep = {
+							hidden = true,
+							ignored = true,
+							exclude = exclude,
+						},
+						explorer = {
+							hidden = true,
+							ignored = true,
+							exclude = exclude,
+						},
 					},
 				},
-			},
-		},
+			})
+		end,
 		keys = {
 			-- Search
 			{
