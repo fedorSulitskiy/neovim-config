@@ -53,13 +53,6 @@ local toggle_terminal = function()
 	end
 end
 
--- Return as a Lazy.nvim plugin spec with init function
-return {
-	"floating-terminal.nvim", -- dummy plugin (or use any plugin name, it won't install since we don't define dependencies)
-	name = "floating-terminal",
-	lazy = false, -- Load immediately on startup
-	init = function()
-		vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
-		vim.keymap.set({ "n", "t" }, "<leader>tt", toggle_terminal, { desc = "Toggle Floating Terminal" })
-	end,
-}
+-- Create command and keymap directly (this file is auto-sourced by Neovim)
+vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
+vim.keymap.set({ "n", "t" }, "<leader>tt", toggle_terminal, { desc = "Toggle Floating Terminal" })
