@@ -21,6 +21,11 @@ return {
                 "html",
                 "terraform",
                 "just",
+                "yaml",
+                "bash",
+                "gitignore",
+                "nginx",
+                "make",
             },
             auto_install = true,
         })
