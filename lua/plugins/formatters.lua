@@ -50,6 +50,12 @@ return {
 					args = { "serve" },
 					filetypes = { "terraform", "tf" },
 				},
+
+                -- Yaml
+                yaml = {
+                    command = "yamlfmt",
+					filetypes = { "yaml", "yml" },
+                },
 			},
 
 			formatters_by_ft = {
@@ -58,6 +64,7 @@ return {
 				python = { "black", "isort" },
 				nix = { "alejandra" },
 				terraform = { "terraform-ls" },
+                yaml = { "yamlfmt" },
 			},
 
 			-- Format on save
