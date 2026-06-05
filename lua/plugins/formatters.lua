@@ -52,8 +52,10 @@ return {
 				},
 
                 -- Yaml
-                yaml = {
+                yamlfmt = {
                     command = "yamlfmt",
+                    args = { "-formatter", "retain_line_breaks_single=true", "-" },
+                    stdin = true,
 					filetypes = { "yaml", "yml" },
                 },
 			},
