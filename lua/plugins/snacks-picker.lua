@@ -10,6 +10,9 @@ return {
 				"**.log",
 				"**/docs",
 				"**/.opencode",
+                "**.html",
+                "coverage.out",
+                "cover.out",
 			}
 			return vim.tbl_deep_extend("force", opts, {
 				picker = {
