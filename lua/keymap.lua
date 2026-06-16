@@ -40,3 +40,7 @@ vim.keymap.set('n', '<leader>tc', '<Cmd>Coverage<CR>', { desc = '[t]oggle [c]ove
 vim.keymap.set('n', '<leader>tC', function()
     require('coverage').clear()
 end, { desc = '[t]est clear [C]overage signs' })
+
+-- Neoclip clipboard history
+vim.keymap.set("n", "<leader>nc", ":Telescope neoclip<CR>", { desc = "Neoclip clipboard history" })
+vim.keymap.set("n", "<leader>nm", ":Telescope macroscope<CR>", { desc = "Neoclip macro history" })
