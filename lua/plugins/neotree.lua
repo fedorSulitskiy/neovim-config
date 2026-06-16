@@ -17,11 +17,15 @@ return {
             "MunifTanjim/nui.nvim",
         },
         opts = {
+            close_if_last_window = false,
             filesystem = {
                 filters = {
-                    show_hidden = true,    -- show dotfiles
-                    show_ignored = true,   -- show stuff in .gitignore
-                    hide_dotfiles = false, -- keep them visible when toggling
+                    hide_dotfiles = false,
+                    hide_gitignored = false,
+                    hide_ignored = false,
+                    never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+                        ".DS_Store",
+                    }
                 },
             },
         },
