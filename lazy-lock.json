@@ -8,6 +8,7 @@
   "conform.nvim": { "branch": "master", "commit": "619363c30309d29ffa631e67c8183f2a72caa373" },
   "context.vim": { "branch": "master", "commit": "b779a19653e94d4a7d6e668f1d71e48de34591fa" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
+  "github-pr-reviewer.nvim": { "branch": "master", "commit": "822dcfec09608acc3733b12992dfbae53ec35e93" },
   "gitsigns.nvim": { "branch": "main", "commit": "25050e4ed39e628282831d4cbecb1850454ce915" },
   "go-tagger.nvim": { "branch": "master", "commit": "8fb11cdda459d2336c6312d9dfb2108f250b95e2" },
   "graph_view_toml_parser": { "branch": "main", "commit": "e52ddcbae563c924a19faf998f862ae61d13a777" },
