@@ -45,6 +45,7 @@
   "videre.nvim": { "branch": "main", "commit": "0ac28c8d10bd42a25386ebf5f8db612306de24f2" },
   "vim-alloy": { "branch": "main", "commit": "0273f88f7199189f9a0f32213a34ab778e226f86" },
   "vim-fugitive": { "branch": "master", "commit": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0" },
+  "vscode-dark-2026.nvim": { "branch": "main", "commit": "3089bb01ec8cede3f3e924a3b1fb3e9d25923ccc" },
   "vscode_modern_theme.nvim": { "branch": "main", "commit": "22371eeb704bed395262e552248c998ef7f41254" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "xml2lua.nvim": { "branch": "master", "commit": "c5fa33ad038958e9592df06e8ca6a88f4e7543aa" }

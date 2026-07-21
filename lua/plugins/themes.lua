@@ -20,28 +20,37 @@ return {
         --     vim.cmd.colorscheme("vscode_modern")
         -- end,
     },
+    -- VS CODE DARK 2026
+    {
+        "rosekamallove/vscode-dark-2026.nvim",
+        priority = 1000,
+        lazy = false,
+        config = function()
+            vim.cmd.colorscheme("vscode-dark-2026")
+        end,
+    },
     -- CATPPUCCIN
     {
-    	"catppuccin/nvim",
-    	name = "catppuccin",
-    	priority = 2000,
-    	config = function()
-    		-- Theme
-    		require("catppuccin").setup({
-    			flavour = "mocha",
-    			integrations = {
-    				cmp = true,
-    				gitsigns = true,
-    				nvimtree = true,
-    				treesitter = true,
-    				notify = false,
-    				mini = {
-    					enabled = true,
-    					indentscope_color = "",
-    				},
-    			},
-    		})
-    		vim.cmd.colorscheme("catppuccin")
-    	end,
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 2000,
+        config = function()
+            -- Theme
+            require("catppuccin").setup({
+                flavour = "mocha",
+                integrations = {
+                    cmp = true,
+                    gitsigns = true,
+                    nvimtree = true,
+                    treesitter = true,
+                    notify = false,
+                    mini = {
+                        enabled = true,
+                        indentscope_color = "",
+                    },
+                },
+            })
+            vim.cmd.colorscheme("catppuccin")
+        end,
     },
 }
