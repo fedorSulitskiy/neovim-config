@@ -35,7 +35,10 @@ vim.keymap.set("n", "[c", function()
     return "<Ignore>"
 end, { desc = "Previous hunk", expr = true })
 
--- Go Coverage
+-- Git Diff
+vim.keymap.set("n", "<leader>dd", "<cmd>Lazydiff<cr>", { desc = "Toggle lazydiff" })
+
+-- Coverage
 vim.keymap.set('n', '<leader>tc', '<Cmd>Coverage<CR>', { desc = '[t]oggle [c]overage signs' })
 vim.keymap.set('n', '<leader>tC', function()
     require('coverage').clear()

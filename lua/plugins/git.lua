@@ -9,6 +9,16 @@ return {
         "tpope/vim-fugitive",
     },
     {
+        "rashedInt32/lazydiff.nvim",
+        cmd = {
+            "Lazydiff", "LazydiffOff", "LazydiffRefresh",
+            "LazydiffNext", "LazydiffPrev", "LazydiffFirst",
+        },
+        config = function()
+            require("lazydiff").setup()
+        end,
+    },
+    {
         "folke/snacks.nvim",
         ---@type snacks.Config
         opts = {
