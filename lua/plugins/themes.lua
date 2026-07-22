@@ -23,7 +23,6 @@ return {
     -- VS CODE DARK 2026
     {
         "rosekamallove/vscode-dark-2026.nvim",
-        priority = 1000,
         lazy = false,
         config = function()
             vim.cmd.colorscheme("vscode-dark-2026")
