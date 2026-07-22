@@ -24,9 +24,9 @@ return {
     {
         "rosekamallove/vscode-dark-2026.nvim",
         lazy = false,
-        config = function()
-            vim.cmd.colorscheme("vscode-dark-2026")
-        end,
+        -- config = function()
+        --     vim.cmd.colorscheme("vscode-dark-2026")
+        -- end,
     },
     -- CATPPUCCIN
     {
