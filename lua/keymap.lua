@@ -38,6 +38,10 @@ end, { desc = "Previous hunk", expr = true })
 -- Git Diff
 vim.keymap.set("n", "<leader>dd", "<cmd>Lazydiff<cr>", { desc = "Toggle lazydiff" })
 
+-- Overseer
+vim.keymap.set("n", "<leader>ot", "<cmd>OverseerToggle<cr>", { desc = "Toggle overseer window", silent = true })
+vim.keymap.set("n", "<leader>or", "<cmd>OverseerRun<cr>", { desc = "Run overseer task", silent = true })
+
 -- Coverage
 vim.keymap.set('n', '<leader>tc', '<Cmd>Coverage<CR>', { desc = '[t]oggle [c]overage signs' })
 vim.keymap.set('n', '<leader>tC', function()
