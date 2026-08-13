@@ -70,7 +70,7 @@ return {
 
             formatters_by_ft = {
                 lua = { "stylua" },
-                go = { "goimports", "gofumpt", "swag" },
+                go = { "goimports", "gofumpt" },
                 python = { "black", "isort" },
                 nix = { "alejandra" },
                 terraform = { "terraform-ls" },
@@ -92,6 +92,19 @@ return {
                 end,
                 mode = { "n", "v" }, -- n = normal mode & v = visual mode
                 desc = "Format buffer",
+            },
+            {
+                "<leader>gs",
+                function()
+                    local result = vim.system({ "swag", "fmt", "-d", "." }, { cwd = vim.fn.getcwd() }):wait()
+                    if result.code == 0 then
+                        vim.notify("swag fmt completed", vim.log.levels.INFO)
+                    else
+                        vim.notify("swag fmt failed: " .. (result.stderr or ""), vim.log.levels.ERROR)
+                    end
+                end,
+                mode = "n",
+                desc = "Format Swaggo comments",
             },
         },
     },
