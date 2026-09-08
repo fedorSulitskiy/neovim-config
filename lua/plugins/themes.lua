@@ -28,28 +28,41 @@ return {
         --     vim.cmd.colorscheme("vscode-dark-2026")
         -- end,
     },
-    -- CATPPUCCIN
+    -- GITHUB
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 2000,
+        'projekt0n/github-nvim-theme',
+        name = 'github-theme',
+        priority = 3000,
         config = function()
-            -- Theme
-            require("catppuccin").setup({
-                flavour = "mocha",
-                integrations = {
-                    cmp = true,
-                    gitsigns = true,
-                    nvimtree = true,
-                    treesitter = true,
-                    notify = false,
-                    mini = {
-                        enabled = true,
-                        indentscope_color = "",
-                    },
-                },
+            require('github-theme').setup({
+                -- ...
             })
-            vim.cmd.colorscheme("catppuccin")
+
+            vim.cmd('colorscheme github_dark_default')
         end,
     },
+    -- CATPPUCCIN
+    -- {
+    --     "catppuccin/nvim",
+    --     name = "catppuccin",
+    --     priority = 2000,
+    --     config = function()
+    --         -- Theme
+    --         require("catppuccin").setup({
+    --             flavour = "mocha",
+    --             integrations = {
+    --                 cmp = true,
+    --                 gitsigns = true,
+    --                 nvimtree = true,
+    --                 treesitter = true,
+    --                 notify = false,
+    --                 mini = {
+    --                     enabled = true,
+    --                     indentscope_color = "",
+    --                 },
+    --             },
+    --         })
+    --         vim.cmd.colorscheme("catppuccin")
+    --     end,
+    -- },
 }
